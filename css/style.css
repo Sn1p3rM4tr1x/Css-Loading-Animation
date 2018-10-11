@@ -1,0 +1,788 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background-color: #202225;
+}
+.container > div {
+  background-color: #36393f;
+  width: 30%;
+  height: 45%;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Start Loading One */
+.container .loading-one span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+}
+.container .loading-one span:first-of-type {
+  animation: span-one 1s ease-in-out infinite;
+  left: 40%;
+  background-color: #256eff;
+}
+.container .loading-one span:nth-of-type(2) {
+  animation: span-tree 1s ease-in-out infinite;
+  left: 45%;
+  background-color: #fcfcfc;
+  animation-delay: 0.1s;
+}
+.container .loading-one span:nth-of-type(3) {
+  animation: span-tree 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+  left: 50%;
+  background-color: #3ddc97;
+}
+.container .loading-one span:nth-of-type(4) {
+  animation: span-tree 1s ease-in-out infinite;
+  animation-delay: 0.7s;
+  left: 55%;
+  background-color: #fcfcfc;
+}
+.container .loading-one span:last-of-type {
+  left: 60%;
+  animation: span-two 1s ease-in-out infinite;
+  animation-delay: 0.5s;
+  background-color: #ff495c;
+}
+
+@keyframes span-one {
+  0%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    left: 40%;
+  }
+  20% {
+    left: 39%;
+  }
+  30% {
+    left: 38%;
+  }
+  40% {
+    left: 37%;
+  }
+  50% {
+    left: 36%;
+  }
+  60% {
+    left: 35%;
+  }
+}
+
+@keyframes span-two {
+  0%,
+  70%,
+  80%,
+  90%,
+  100% {
+    left: 60%;
+  }
+  20% {
+    left: 61%;
+  }
+  30% {
+    left: 62%;
+  }
+  40% {
+    left: 63%;
+  }
+  50% {
+    left: 64%;
+  }
+  60% {
+    left: 65%;
+  }
+}
+@keyframes span-tree {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+}
+/* End Loading One */
+
+/* Start Loading Two */
+
+.container .loading-two span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+}
+.container .loading-two span:first-of-type {
+  left: 35%;
+  top: 35%;
+  animation: animation-two-span-one 1s alternate infinite;
+  background-color: #256eff;
+}
+.container .loading-two span:nth-of-type(2) {
+  left: 55%;
+  top: 35%;
+  animation: animation-two-span-two 1s alternate infinite;
+  background-color: #ff495c;
+}
+.container .loading-two span:nth-of-type(3) {
+  left: 45%;
+  top: 45%;
+  animation: animation-two-span-tree 2s infinite;
+  animation-delay: 0.5s;
+  background-color: #a2adc2;
+  z-index: 2;
+}
+.container .loading-two span:nth-of-type(4) {
+  top: 55%;
+  left: 35%;
+  animation: animation-two-span-four 1s alternate infinite;
+  background-color: #3ddc97;
+}
+.container .loading-two span:last-of-type {
+  left: 55%;
+  top: 55%;
+  animation: animation-two-span-five 1s alternate infinite;
+  background-color: #ffe068;
+}
+@keyframes animation-two-span-one {
+  form {
+    left: 35%;
+    top: 35%;
+  }
+  to {
+    left: 45%;
+    top: 45%;
+  }
+}
+@keyframes animation-two-span-two {
+  form {
+    left: 55%;
+    top: 35%;
+  }
+  to {
+    left: 45%;
+    top: 45%;
+  }
+}
+
+@keyframes animation-two-span-tree {
+  0%,
+  100% {
+    transform: scale(1);
+    background-color: #a2adc2;
+  }
+  50% {
+    transform: scale(2);
+    background-color: #fff;
+  }
+}
+@keyframes animation-two-span-four {
+  form {
+    left: 35%;
+    top: 55%;
+  }
+  to {
+    left: 45%;
+    top: 45%;
+  }
+}
+@keyframes animation-two-span-five {
+  form {
+    left: 55%;
+    top: 55%;
+  }
+  to {
+    left: 45%;
+    top: 45%;
+  }
+}
+/* End Loading Two */
+/* Start Loading Tree */
+.container .loading-tree span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+}
+.container .loading-tree span:first-of-type {
+  left: 35%;
+  top: 35%;
+  animation: animation-tree-span-one 3s alternate infinite;
+  background-color: #256eff;
+}
+.container .loading-tree span:nth-of-type(2) {
+  left: 55%;
+  top: 35%;
+  animation: animation-tree-span-two 3s alternate infinite;
+  background-color: #ff495c;
+}
+.container .loading-tree span:nth-of-type(3) {
+  left: 45%;
+  top: 45%;
+  animation: animation-tree-span-tree 3s alternate infinite;
+  background-color: #ffffff;
+  z-index: 2;
+}
+.container .loading-tree span:nth-of-type(4) {
+  top: 55%;
+  left: 35%;
+  animation: animation-tree-span-four 3s alternate infinite;
+  background-color: #3ddc97;
+}
+.container .loading-tree span:last-of-type {
+  left: 55%;
+  top: 55%;
+  animation: animation-tree-span-five 3s alternate infinite;
+  background-color: #ffe068;
+}
+@keyframes animation-tree-span-one {
+  0%,
+  100% {
+    left: 35%;
+    top: 35%;
+  }
+  25% {
+    top: 55%;
+    left: 35%;
+  }
+  50% {
+    left: 55%;
+    top: 55%;
+  }
+  75% {
+    left: 55%;
+    top: 35%;
+  }
+}
+@keyframes animation-tree-span-two {
+  0%,
+  100% {
+    left: 55%;
+    top: 35%;
+  }
+  25% {
+    left: 55%;
+    top: 55%;
+  }
+  50% {
+    top: 55%;
+    left: 35%;
+  }
+  75% {
+    left: 35%;
+    top: 35%;
+  }
+}
+@keyframes animation-tree-span-tree {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(1.6);
+    opacity: 0.2;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-tree-span-four {
+  0%,
+  100% {
+    top: 55%;
+    left: 35%;
+  }
+  25% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 55%;
+    top: 35%;
+  }
+  75% {
+    left: 55%;
+    top: 55%;
+  }
+}
+
+@keyframes animation-tree-span-five {
+  0%,
+  100% {
+    left: 55%;
+    top: 55%;
+  }
+  25% {
+    left: 55%;
+    top: 35%;
+  }
+  50% {
+    left: 35%;
+    top: 35%;
+  }
+  75% {
+    top: 55%;
+    left: 35%;
+  }
+}
+/* End Loading Tree */
+
+/* Start Loading Four */
+
+.container .loading-four span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+}
+.container .loading-four span:first-of-type {
+  left: 40%;
+  top: 45%;
+  animation: animation-four-span-one 2s alternate infinite;
+  background-color: #256eff;
+}
+.container .loading-four span:nth-of-type(2) {
+  left: 45%;
+  top: 45%;
+  animation: animation-four-span-two 2s alternate infinite;
+  background-color: #ff495c;
+}
+.container .loading-four span:nth-of-type(3) {
+  left: 50%;
+  top: 45%;
+  animation: animation-four-span-tree 1s alternate infinite;
+  background-color: #ffffff;
+  z-index: 2;
+}
+.container .loading-four span:nth-of-type(4) {
+  left: 55%;
+  top: 45%;
+  animation: animation-four-span-four 2s alternate infinite;
+  background-color: #3ddc97;
+}
+.container .loading-four span:last-of-type {
+  left: 60%;
+  top: 45%;
+  animation: animation-four-span-five 2s alternate infinite;
+
+  background-color: #ffe068;
+}
+@keyframes animation-four-span-one {
+  0% {
+    left: 40%;
+    top: 45%;
+    opacity: 1;
+  }
+  16.5% {
+    left: 40%;
+    top: 55%;
+    opacity: 0.6;
+  }
+  33% {
+    left: 45%;
+    top: 55%;
+    opacity: 0.3;
+  }
+  49.5% {
+    left: 50%;
+    top: 55%;
+    opacity: 0.1;
+  }
+  66% {
+    left: 55%;
+    top: 55%;
+    opacity: 0.3;
+  }
+  82.5% {
+    left: 60%;
+    top: 55%;
+    opacity: 0.6;
+  }
+  100% {
+    left: 60%;
+    top: 45%;
+    opacity: 1;
+  }
+}
+@keyframes animation-four-span-two {
+  0% {
+    left: 45%;
+    top: 45%;
+    opacity: 1;
+  }
+  25% {
+    left: 45%;
+    top: 35%;
+    opacity: 0.5;
+  }
+  50% {
+    left: 50%;
+    top: 35%;
+    opacity: 0.1;
+  }
+  75% {
+    left: 55%;
+    top: 35%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 55%;
+    top: 45%;
+    opacity: 1;
+  }
+}
+@keyframes animation-four-span-tree {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes animation-four-span-four {
+  0% {
+    left: 55%;
+    top: 45%;
+    opacity: 1;
+  }
+  25% {
+    left: 55%;
+    top: 55%;
+    opacity: 0.5;
+  }
+  50% {
+    left: 50%;
+    top: 55%;
+    opacity: 0.1;
+  }
+  75% {
+    left: 45%;
+    top: 55%;
+    opacity: 0.5;
+  }
+  100% {
+    left: 45%;
+    top: 45%;
+    opacity: 1;
+  }
+}
+@keyframes animation-four-span-five {
+  0% {
+    left: 60%;
+    top: 45%;
+  }
+  16.5% {
+    left: 60%;
+    top: 35%;
+    opacity: 0.6;
+  }
+  33% {
+    left: 55%;
+    top: 35%;
+    opacity: 0.3;
+  }
+  49.5% {
+    left: 50%;
+    top: 35%;
+    opacity: 0.1;
+  }
+  66% {
+    left: 45%;
+    top: 35%;
+    opacity: 0.3;
+  }
+  82.5% {
+    left: 40%;
+    top: 35%;
+    opacity: 0.6;
+  }
+  100% {
+    left: 40%;
+    top: 45%;
+  }
+}
+/* Start Loading Five */
+
+.container .loading-five span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 45%;
+}
+.container .loading-five span:first-of-type {
+  left: 45%;
+  top: 45%;
+  animation: animation-five-span-global 1s alternate infinite;
+  background-color: #ffffff;
+}
+.container .loading-five span:nth-of-type(2) {
+  left: 50%;
+  top: 45%;
+  animation: animation-five-span-two 1s alternate infinite;
+  background-color: #256eff;
+}
+.container .loading-five span:nth-of-type(3) {
+  left: 55%;
+  top: 45%;
+  background-color: #ffffff;
+  animation: animation-five-span-global 1s alternate infinite;
+  z-index: 2;
+}
+.container .loading-five span:nth-of-type(4) {
+  left: 45%;
+  top: 51%;
+  animation: animation-five-span-four 1s alternate infinite;
+  background-color: #3ddc97;
+}
+.container .loading-five span:nth-of-type(5) {
+  left: 50%;
+  top: 51%;
+  animation: animation-five-span-global 1s alternate infinite;
+  background-color: #ffffff;
+}
+.container .loading-five span:nth-of-type(6) {
+  left: 55%;
+  top: 51%;
+  animation: animation-five-span-six 1s alternate infinite;
+  background-color: #ffe068;
+}
+.container .loading-five span:nth-of-type(7) {
+  left: 45%;
+  top: 57%;
+  animation: animation-five-span-global 1s alternate infinite;
+  background-color: #ffffff;
+}
+.container .loading-five span:nth-of-type(8) {
+  left: 50%;
+  top: 57%;
+  animation: animation-five-span-eight 1s alternate infinite;
+  background-color: #ff495c;
+}
+.container .loading-five span:last-of-type {
+  left: 55%;
+  top: 57%;
+  animation: animation-five-span-global 1s alternate infinite;
+  background-color: #ffffff;
+}
+@keyframes animation-five-span-global {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes animation-five-span-two {
+  from {
+    left: 50%;
+    top: 45%;
+  }
+  to {
+    left: 50%;
+    top: 40%;
+  }
+}
+@keyframes animation-five-span-four {
+  from {
+    left: 45%;
+    top: 51%;
+  }
+  to {
+    left: 40%;
+    top: 51%;
+  }
+}
+@keyframes animation-five-span-six {
+  from {
+    left: 55%;
+    top: 51%;
+  }
+  to {
+    left: 60%;
+    top: 51%;
+  }
+}
+@keyframes animation-five-span-eight {
+  from {
+    left: 50%;
+    top: 57%;
+  }
+  to {
+    left: 50%;
+    top: 62%;
+  }
+}
+/* End Loading Five */
+
+/* Start Loading Six */
+
+.container .loading-six span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  top: 32%;
+}
+.container .loading-six span:first-of-type {
+  left: 50%;
+  top: 38%;
+  animation: animation-six-span-one 2s infinite;
+  background-color: #256eff;
+}
+.container .loading-six span:nth-of-type(2) {
+  left: 50%;
+  top: 44%;
+  animation: animation-six-span-two 2s infinite;
+  background-color: #ff495c;
+}
+.container .loading-six span:nth-of-type(3) {
+  left: 50%;
+  top: 50%;
+  animation: animation-six-span-tree 2s infinite;
+  background-color: #ffffff;
+  border-top: 5px solid #ff495c;
+  border-bottom: 5px solid #3ddc97;
+  border-left: 5px solid #256eff;
+  border-right: 5px solid #ffe068;
+}
+.container .loading-six span:nth-of-type(4) {
+  left: 50%;
+  top: 56%;
+  animation: animation-six-span-four 2s infinite;
+  background-color: #3ddc97;
+}
+.container .loading-six span:last-of-type {
+  left: 50%;
+  top: 62%;
+  animation: animation-six-span-five 2s infinite;
+  background-color: #ffe068;
+}
+@keyframes animation-six-span-one {
+  0%,
+  100% {
+    left: 50%;
+    top: 38%;
+  }
+  25% {
+    left: 60%;
+    top: 50%;
+  }
+  50% {
+    left: 50%;
+    top: 62%;
+  }
+  75% {
+    left: 40%;
+    top: 50%;
+  }
+}
+
+@keyframes animation-six-span-two {
+  0%,
+  100% {
+    left: 50%;
+    top: 44%;
+  }
+  25% {
+    left: 45%;
+    top: 50%;
+  }
+  50% {
+    left: 50%;
+    top: 56%;
+  }
+  75% {
+    left: 55%;
+    top: 50%;
+  }
+}
+@keyframes animation-six-span-tree {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotatez(-360deg);
+  }
+}
+@keyframes animation-six-span-four {
+  0%,
+  100% {
+    left: 50%;
+    top: 56%;
+  }
+  25% {
+    top: 50%;
+    left: 55%;
+  }
+  50% {
+    left: 50%;
+    top: 44%;
+  }
+  75% {
+    top: 50%;
+    left: 45%;
+  }
+}
+@keyframes animation-six-span-five {
+  0%,
+  100% {
+    left: 50%;
+    top: 62%;
+  }
+  25% {
+    left: 40%;
+    top: 50%;
+  }
+  50% {
+    left: 50%;
+    top: 38%;
+  }
+  75% {
+    left: 60%;
+    top: 50%;
+  }
+}
+/* End Loading Six */
